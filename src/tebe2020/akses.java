@@ -7,19 +7,16 @@ import java.util.InputMismatchException;
 public class akses {
 	
 	static Scanner scn = new Scanner(System.in);
-	static Transaksi transaksi= new Transaksi();
-	static Olah proses = new Olah();
 	static Date date = new Date();
 	
 	public static void main(String[] args) throws Exception {
 		User user = new User();
 		Login log = new Login();
-		System.out.println("     Toko Selamat Pagi");
 		System.out.println("============================");
 		System.out.println(date+"\n");
-		System.out.println("1. Login");
-		System.out.println("2. Daftar");
-		System.out.print("Tentukan pilihanmu : ");
+		System.out.println("1. Login \t 2. Daftar");
+		System.out.println("============================");
+		System.out.print("Pilihan : ");
 
 		try {
 			Integer pilihan = scn.nextInt();

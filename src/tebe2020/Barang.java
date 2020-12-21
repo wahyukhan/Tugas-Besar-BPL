@@ -20,7 +20,7 @@ public class Barang implements Kelola {
 
 	public void barang_setting() {
 		Scanner scan = new Scanner(System.in);
-		System.out.println("\n\nPengelolaan data user");
+		System.out.println("\n\nPengelolaan Data Barang");
 		System.out.println("1. Tambah Barang");
 		System.out.println("2. Lihat Daftar Barang");
 		System.out.println("3. Update Barang");
@@ -28,7 +28,7 @@ public class Barang implements Kelola {
 		System.out.println("5. Hapus Barang");
 		System.out.println("6. Re-Stock Barang");
 		System.out.println("0. Kembali");
-		System.out.print("Tentukan pilihanmu : ");
+		System.out.print("Pilihan : ");
 		Integer pilihan = scan.nextInt();	
 		
 		switch (pilihan) {
@@ -60,7 +60,7 @@ public class Barang implements Kelola {
 	public void tambahData(){
 		Connect connect = new Connect();
 		try {
-			System.out.println("\n\n--Tambah Barang--");
+			System.out.println("\n\nTambah Barang ======");
 			System.out.print("Nama Barang : ");
 			String brg = scn.nextLine();
 			System.out.print("SKU Barang : ");
@@ -107,7 +107,7 @@ public class Barang implements Kelola {
 	public void editData() {
 		
 		Connect connect = new Connect();
-		System.out.println("\n\n--UPDATE--");
+		System.out.println("\n\nUpdate ========");
 		System.out.println("1. Ubah Nama Barang");
 		System.out.println("2. Ubah Harga Beli");
 		System.out.println("3. Ubah Harga Jual");
@@ -118,7 +118,7 @@ public class Barang implements Kelola {
 				// Ubah email
 				case 1:									
 				try {
-					System.out.println("\n Ubah Nama Barang");
+					System.out.println("\n Ubah Nama Barang ======");
 					System.out.print("Nama Barang Lama :");
 					String name = br.readLine();
 					System.out.print("Nama Barang baru :");
@@ -161,7 +161,7 @@ public class Barang implements Kelola {
 				
 				// Ubah password
 				case 2:
-					System.out.println("\n Ubah Harga Beli");
+					System.out.println("\n Ubah Harga Beli ======");
 					System.out.print("Masukkan SKU :");
 					String sku = scn.next();
 					System.out.print("Update Harga Beli :");
@@ -195,7 +195,7 @@ public class Barang implements Kelola {
 					        e.printStackTrace();
 					    }break;
 				case 3:
-					System.out.println("\n Ubah Harga Jual");
+					System.out.println("\n Ubah Harga Jual ======");
 					System.out.print("Masukkan SKU :");
 					String sku1 = scn.next();
 					System.out.print("Update Harga Jual :");
@@ -243,7 +243,7 @@ public class Barang implements Kelola {
 		Connect connect = new Connect();
 		try {
 		conn = connect.getConn();
-		System.out.println("\n\n--HAPUS--");
+		System.out.println("\n\nHapus Barang ======");
 		System.out.print("Masukkan SKU :");
 		String key = scn.next();
 		System.out.print("Hapus Barang ?..(y/t)  ");
@@ -273,7 +273,7 @@ public class Barang implements Kelola {
 		Connect connect = new Connect();
 		try {
 			conn = connect.getConn();
-			System.out.println("\n\n--CARI--");
+			System.out.println("\n\nCari Barang ======");
 			System.out.print("Masukkan SKU : ");
 			String key = scn.next();
 
@@ -307,7 +307,7 @@ public class Barang implements Kelola {
 		Connect connect = new Connect();
 		try {
 			conn = connect.getConn();
-			System.out.println("\n\n--LIHAT--");
+			System.out.println("\n\nLihat Barang =====");
 			String query = "SELECT*FROM barang";
 			try {
 				stmt = conn.createStatement();				

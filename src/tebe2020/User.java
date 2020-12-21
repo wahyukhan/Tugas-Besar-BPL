@@ -19,13 +19,13 @@ public class User extends Login implements Kelola{
 
 			Scanner scan = new Scanner(System.in);
 				
-			System.out.println("\n\nPengelolaan data user");
+			System.out.println("Kelola Akun ======");
 			System.out.println("1. Edit akun");
 			System.out.println("2. Hapus akun");
 			System.out.println("3. Cari data");
 			System.out.println("4. Lihat data");
 			System.out.println("0. Kembali");
-			System.out.print("Tentukan pilihanmu : ");
+			System.out.print("Pilihan : ");
 			Integer pilihan = scan.nextInt();	
 			
 			switch (pilihan) {
@@ -61,7 +61,7 @@ public class User extends Login implements Kelola{
 		Connect connect = new Connect();
 		try {
 			conn = connect.getConn();
-			System.out.println("\n\n--SIGN UP--");
+			System.out.println("Daftar ======");
 			System.out.print("Masukkan username : ");
 			String username = scn.next();
 			String str = String.format("%tF", date);
@@ -112,21 +112,21 @@ public class User extends Login implements Kelola{
 	@Override
 	public void editData(){
 		Connect connect = new Connect();
-		System.out.println("\n\n--UPDATE--");
-		System.out.println("1. Ubah email");
-		System.out.println("2. Ubah password");
-		System.out.print("Tentukan pilihanmu : ");
+		System.out.println("\n\nEdit Akun ====== ");
+		System.out.println("1. Email");
+		System.out.println("2. Password");
+		System.out.print("Pilihan : ");
 		try {
 			Integer pilihan = scn.nextInt();
 			switch (pilihan) {
 				// Ubah email
 				case 1:
-					System.out.println("\n--Ubah Email--");
+					System.out.println("\nEmail ======");
 					System.out.print("Masukkan Username :");
 					String name = scn.next();
-					System.out.print("Masukkan Email baru :");
+					System.out.print("Masukkan Email Baru :");
 					String email = scn.next();
-					System.out.print("Masukkan password :");
+					System.out.print("Masukkan Password :");
 					String pwd = scn.next();
 
 					 try{
@@ -168,7 +168,7 @@ public class User extends Login implements Kelola{
 				
 				// Ubah password
 				case 2:
-					System.out.println("\n--Ubah password--");
+					System.out.println("\nPassword ======");
 					System.out.print("Masukkan Username :");
 					String uname = scn.next();
 					System.out.print("Masukkan password lama :");
@@ -232,8 +232,8 @@ public class User extends Login implements Kelola{
 		Connect connect = new Connect();
 		try {
 		conn = connect.getConn();
-		System.out.println("\n\n--HAPUS--");
-		System.out.print("Apakah anda yakin untuk menghapus akun anda ?..(y/t)  ");
+		System.out.println("\n\nHapus Akun ======");
+		System.out.print("Hapus akun ?..(y/t)  ");
 		String lanjut = scn.next();
 		System.out.print("Konfirmasi Password :");
 		String conPass = scn.next();
@@ -264,7 +264,7 @@ public class User extends Login implements Kelola{
 		Connect connect = new Connect();
 		try {
 			conn = connect.getConn();
-			System.out.println("\n\n--CARI--");
+			System.out.println("\n\nCari Akun ======");
 			System.out.print("Masukkan username : ");
 			String kunci = scn.next();
 
@@ -300,7 +300,7 @@ public class User extends Login implements Kelola{
 		Connect connect = new Connect();
 		try {
 			conn = connect.getConn();
-			System.out.println("\n\n--LIHAT--");
+			System.out.println("\n\nLihat Data ======");
 			String query = "SELECT*FROM user";
 			try {
 				stmt = conn.createStatement();				
