@@ -1,13 +1,12 @@
 package tebe2020;
+
 import java.sql.*;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Scanner;
 
-import initebe.Connect;
-
-public class Transaksi {
-	Connect connect = new Connect();
+public class Transaksi extends Kelola{
+    Connect connect = new Connect();
     Connection connection;
     Scanner scanner;
 
@@ -213,3 +212,4 @@ public class Transaksi {
         return result;
     }
 }
+

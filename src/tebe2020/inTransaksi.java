@@ -1,7 +1,7 @@
 package tebe2020;
 
 public class inTransaksi {
-	private String sku;
+    private String sku;
     private int jumlah;
     private int harga;
 
@@ -22,6 +22,5 @@ public class inTransaksi {
     public String getSku() {
         return sku;
     }
-
 
 }
